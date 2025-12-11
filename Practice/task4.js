@@ -6,19 +6,13 @@
  * @returns {boolean} True if the string is a palindrome, false otherwise.
  */
 function isPalindrome(str) {
-    // 1. Clean the string for the check
-    // Uses a regular expression (/[^A-Za-z0-9]/g) to remove all non-alphanumeric characters.
-    // .toLowerCase() converts the string to lowercase to ensure case-insensitivity.
+   
     const cleanedString = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
 
-    // 2. Reverse the cleaned string
-    // .split('') turns the string into an array of characters.
-    // .reverse() reverses the array.
-    // .join('') joins the characters back into a string.
+   
     const reversedString = cleanedString.split('').reverse().join('');
 
-    // 3. Compare the cleaned string with its reversed version
-    // Returns true if they are identical, indicating a palindrome.
+  
     return cleanedString === reversedString;
 }
 
